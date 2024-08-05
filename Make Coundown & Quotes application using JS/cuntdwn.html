@@ -1,0 +1,44 @@
+<html>
+    <div style="  margin: 50px 400px;">
+        <button type="button" onclick="increament()" style="height:50px;   font-size: 18px; width: 120px; background-color: rgb(24, 201, 11); border-radius: 10px; border: 0; color: white; ">
+            +
+        </button>
+        <button type="button" style="  font-size: 8px; height:50px; display: inline-block;   width: 120px; background-color: pink; border-radius: 10px; border: 0;"  >
+            <h1 id="msg"></h1>
+        </button>
+        <button type="button" onclick="decreament()" style="  font-size: 10px; display: inline-block; height:50px; width: 120px; background-color:  rgb(24, 201, 11); color: white      ; border-radius: 10px; border: 0; font-size: 18px;" >
+            -
+        </button>
+    </div>
+    <button type="button" onclick="reset()" style=" font-size:10px; margin: 10px 520px; display: block; font-size: 10px; height:50px; width: 120px; background-color: rgb(24, 201, 11); color: white; border-radius: 10px; border: 0; " >
+        reset
+    </button>
+</html>
+
+
+<script type="text/javascript">
+
+    let cnt =0;
+    document.getElementById('msg').innerHTML = `counter: ${cnt}`
+
+    const increament=() =>
+    {
+        cnt++;
+        document.getElementById('msg').innerHTML = `counter:${cnt}` 
+    }
+
+    const decreament=()=>
+    {
+        if(cnt>0)
+        {
+            cnt--;
+        }
+        document.getElementById('msg').innerHTML = `counter: ${cnt}`
+    }
+
+    const reset = () =>
+    {
+        cnt=0;
+        document.getElementById('msg').innerHTML=`counter:${cnt}`
+    }
+</script>
